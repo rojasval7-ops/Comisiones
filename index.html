@@ -149,7 +149,7 @@ table.mgr-table tr:hover td{background:rgba(255,255,255,0.02)}
 .btn-approve:hover{background:rgba(76,175,80,0.25)}
 .btn-reject{padding:4px 9px;background:rgba(224,80,80,0.1);border:1px solid rgba(224,80,80,0.3);border-radius:2px;color:var(--err);font-family:'Domine',serif;font-size:8px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .2s}
 .btn-reject:hover{background:rgba(224,80,80,0.2)}
-.mgr-summary-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.mgr-summary-cards{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
 .msc{background:rgba(255,255,255,0.07);border:1px solid rgba(201,168,76,0.2);border-radius:3px;padding:10px 14px;position:relative;overflow:hidden}
 .msc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,#A2234D,#0053A1)}
 .msc-lbl{font-size:7px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:4px;font-weight:700}
@@ -187,6 +187,57 @@ table.mgr-table tr:hover td{background:rgba(255,255,255,0.02)}
 @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 .sale-card{animation:fadeIn .2s ease}
 .toast{position:fixed;bottom:24px;right:24px;z-index:9999;padding:10px 18px;background:#222;border:1px solid var(--gold-border);border-radius:4px;color:var(--gold);font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;animation:fadeIn .2s ease;transition:opacity .3s;pointer-events:none}
+
+/* ══ RESPONSIVE MOBILE ══════════════════════════════════════════════ */
+@media (max-width:768px){
+  #app{padding:.5rem}
+  .header-bar{flex-wrap:wrap;padding:10px 14px;gap:8px}
+  .header-logos-left{gap:12px}
+  .logo-barca{height:44px}
+  .logo-legends{height:34px}
+  .header-divider{height:40px;margin:0 10px}
+  .header-center{order:3;width:100%;padding:4px 0 0;flex:none}
+  .maintitle{font-size:15px}
+  .eyebrow{font-size:8px}
+  .subtitle{display:none}
+  .header-right{gap:8px}
+  .user-badge{padding:5px 10px}
+  .user-badge-name{font-size:9px}
+  .logout-btn{font-size:8px;padding:5px 8px}
+  .month-bar{flex-wrap:wrap;gap:8px;padding:8px 12px}
+  .month-select{font-size:9px;padding:5px 10px}
+  .month-total-pill{margin-left:0;width:100%;text-align:center;font-size:10px}
+  .view-tabs{gap:4px}
+  .vtab{padding:6px 12px;font-size:8px;letter-spacing:1px}
+  .agents-grid{grid-template-columns:1fr;gap:8px}
+  .agent-col-body{max-height:260px}
+  .agent-summary{gap:4px;padding:6px 8px}
+  .agent-sum-lbl{font-size:6px}
+  .agent-sum-val{font-size:11px}
+  .sale-card{padding:8px 10px}
+  .sale-card-key{font-size:7px}
+  .sale-card-val{font-size:10px}
+  .sale-commission-val{font-size:14px}
+  .mgr-summary-cards{grid-template-columns:repeat(3,1fr)}
+  .msc-val{font-size:18px}
+  .mgr-controls{flex-direction:column;align-items:flex-start;gap:8px}
+  .mgr-filter{margin-left:0;flex-wrap:wrap}
+  .filter-btn{font-size:8px;padding:4px 10px}
+  table.mgr-table th,table.mgr-table td{font-size:9px;padding:6px 8px;white-space:nowrap}
+  .modal{max-width:100%;margin:0 .5rem}
+  .form-row{grid-template-columns:1fr}
+  .add-sale-btn{margin:6px;padding:9px}
+}
+
+@media (max-width:480px){
+  .agents-grid{gap:6px}
+  .mgr-summary-cards{grid-template-columns:repeat(2,1fr);gap:6px}
+  .msc-val{font-size:16px}
+  .login-card{padding:2rem 1.5rem}
+  .login-logos img{height:44px}
+  .maintitle{font-size:13px}
+  table.mgr-table th,table.mgr-table td{font-size:8px;padding:5px 6px}
+}
 </style>
 </head>
 <body>
@@ -782,8 +833,10 @@ function renderManager() {
   const pending=mSales.filter(s=>s.status==='pending').length;
   const approved=mSales.filter(s=>s.status==='approved').length;
   const totalComm=mSales.filter(s=>s.status==='approved').reduce((a,s)=>a+(s.commission||0),0);
+  const totalSeatsM=mSales.reduce((a,s)=>a+(parseInt(s.seats)||0),0);
   document.getElementById('mgr-summary').innerHTML=`
     <div class="msc"><div class="msc-lbl">Total Ventas</div><div class="msc-val">${total}</div><div class="msc-sub">registradas</div></div>
+    <div class="msc"><div class="msc-lbl">Asientos</div><div class="msc-val">${totalSeatsM}</div><div class="msc-sub">vendidos</div></div>
     <div class="msc"><div class="msc-lbl">Pendientes</div><div class="msc-val">${pending}</div><div class="msc-sub">por verificar</div></div>
     <div class="msc"><div class="msc-lbl">Aprobadas</div><div class="msc-val">${approved}</div><div class="msc-sub">confirmadas</div></div>
     <div class="msc"><div class="msc-lbl">Comisiones Aprobadas</div><div class="msc-val">${formatEur(totalComm)}</div><div class="msc-sub">total</div></div>
