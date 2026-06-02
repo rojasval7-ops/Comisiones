@@ -10,7 +10,7 @@
 :root{
   --gold:#c9a84c;--gold-dim:rgba(201,168,76,0.18);--gold-border:rgba(201,168,76,0.3);
   --barca-red:#A2234D;--barca-blue:#0053A1;
-  --bg:#111;--panel:rgba(0,0,0,0.42);--border:rgba(255,255,255,0.07);
+  --bg:#1e1e2a;--panel:rgba(255,255,255,0.06);--border:rgba(255,255,255,0.12);
   --text:rgba(255,255,255,0.85);--muted:rgba(255,255,255,0.38);
   --ok:#4caf50;--err:#e05050;
 }
@@ -18,15 +18,15 @@ html,body{height:100%;margin:0;padding:0;font-family:'Domine',serif}
 body{
   background-color:var(--bg);
   background-image:
-    radial-gradient(ellipse 100% 70% at 0% 0%,rgba(162,35,77,0.42) 0%,transparent 55%),
-    radial-gradient(ellipse 100% 70% at 100% 100%,rgba(0,83,161,0.38) 0%,transparent 55%),
-    radial-gradient(circle,rgba(255,255,255,0.22) 1px,transparent 1px);
+    radial-gradient(ellipse 100% 70% at 0% 0%,rgba(162,35,77,0.55) 0%,transparent 55%),
+    radial-gradient(ellipse 100% 70% at 100% 100%,rgba(0,83,161,0.50) 0%,transparent 55%),
+    radial-gradient(circle,rgba(255,255,255,0.12) 1px,transparent 1px);
   background-size:auto,auto,18px 18px;
   color:#fff;min-height:100vh;
 }
 /* LOGIN */
 #login-screen{display:flex;align-items:center;justify-content:center;min-height:100vh;padding:2rem}
-.login-card{background:rgba(0,0,0,0.65);border:1px solid var(--gold-border);border-radius:6px;padding:3rem 2.5rem;width:100%;max-width:380px;text-align:center}
+.login-card{background:rgba(255,255,255,0.07);border:1px solid var(--gold-border);border-radius:6px;padding:3rem 2.5rem;width:100%;max-width:380px;text-align:center}
 .login-logos{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:1.5rem}
 .login-logos img{height:56px;width:auto;object-fit:contain;mix-blend-mode:screen}
 .login-divider-v{width:1px;height:52px;background:rgba(255,255,255,0.2)}
@@ -35,7 +35,7 @@ body{
 .login-title span{color:#fff}
 .login-sub{font-size:8px;letter-spacing:4px;color:var(--muted);text-transform:uppercase;margin-bottom:2rem;margin-top:.4rem}
 .login-label{display:block;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem;text-align:left}
-.login-select,.login-input{width:100%;padding:10px 14px;background:rgba(255,255,255,0.05);border:1px solid var(--gold-border);border-radius:3px;color:#fff;font-family:'Domine',serif;font-size:13px;margin-bottom:1rem;outline:none;appearance:none;-webkit-appearance:none}
+.login-select,.login-input{width:100%;padding:10px 14px;background:rgba(255,255,255,0.10);border:1px solid var(--gold-border);border-radius:3px;color:#fff;font-family:'Domine',serif;font-size:13px;margin-bottom:1rem;outline:none;appearance:none;-webkit-appearance:none}
 .login-select option{background:#1a1a1a;color:#fff}
 .login-select:focus,.login-input:focus{border-color:var(--gold)}
 .login-btn{width:100%;padding:11px;background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:3px;color:var(--gold);font-family:'Domine',serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s;margin-top:.5rem}
@@ -81,7 +81,7 @@ body{
 .agent-col-body::-webkit-scrollbar{width:3px}
 .agent-col-body::-webkit-scrollbar-thumb{background:var(--gold-border);border-radius:2px}
 /* SALE CARD */
-.sale-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:3px;padding:10px 12px;position:relative;transition:border-color .2s}
+.sale-card{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.11);border-radius:3px;padding:10px 12px;position:relative;transition:border-color .2s}
 .sale-card:hover{border-color:var(--gold-border)}
 .sale-card-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
 .sale-card-type{font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:2px 7px;border-radius:2px;color:#fff}
@@ -103,17 +103,17 @@ body{
 /* MODAL */
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:1000;align-items:center;justify-content:center;padding:1rem}
 .modal-overlay.open{display:flex}
-.modal{background:#171717;border:1px solid var(--gold-border);border-radius:6px;width:100%;max-width:440px;max-height:90vh;overflow-y:auto}
+.modal{background:#2a2a38;border:1px solid var(--gold-border);border-radius:6px;width:100%;max-width:440px;max-height:90vh;overflow-y:auto}
 .modal::-webkit-scrollbar{width:3px}
 .modal::-webkit-scrollbar-thumb{background:var(--gold-border)}
-.modal-hdr{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--gold-border);position:sticky;top:0;background:#171717;z-index:1}
+.modal-hdr{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--gold-border);position:sticky;top:0;background:#2a2a38;z-index:1}
 .modal-title{font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
 .modal-close{background:transparent;border:none;color:var(--muted);font-size:18px;cursor:pointer;line-height:1;padding:0 4px;transition:color .2s}
 .modal-close:hover{color:#fff}
 .modal-body{padding:18px}
 .form-group{margin-bottom:14px}
 .form-label{display:block;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:5px;font-weight:700}
-.form-control{width:100%;padding:9px 12px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:3px;color:#fff;font-family:'Domine',serif;font-size:12px;outline:none;transition:border-color .2s;appearance:none;-webkit-appearance:none}
+.form-control{width:100%;padding:9px 12px;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.15);border-radius:3px;color:#fff;font-family:'Domine',serif;font-size:12px;outline:none;transition:border-color .2s;appearance:none;-webkit-appearance:none}
 .form-control:focus{border-color:var(--gold)}
 .form-control option{background:#1a1a1a;color:#fff}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -150,7 +150,7 @@ table.mgr-table tr:hover td{background:rgba(255,255,255,0.02)}
 .btn-reject{padding:4px 9px;background:rgba(224,80,80,0.1);border:1px solid rgba(224,80,80,0.3);border-radius:2px;color:var(--err);font-family:'Domine',serif;font-size:8px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .2s}
 .btn-reject:hover{background:rgba(224,80,80,0.2)}
 .mgr-summary-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
-.msc{background:var(--panel);border:1px solid rgba(201,168,76,0.15);border-radius:3px;padding:10px 14px;position:relative;overflow:hidden}
+.msc{background:rgba(255,255,255,0.07);border:1px solid rgba(201,168,76,0.2);border-radius:3px;padding:10px 14px;position:relative;overflow:hidden}
 .msc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,#A2234D,#0053A1)}
 .msc-lbl{font-size:7px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:4px;font-weight:700}
 .msc-val{font-size:22px;font-weight:900;color:#fff;line-height:1}
@@ -170,6 +170,20 @@ table.mgr-table tr:hover td{background:rgba(255,255,255,0.02)}
 .pill-aina{background:rgba(0,83,161,0.2);color:#8af;border:1px solid rgba(0,83,161,0.4)}
 .pill-marta{background:rgba(201,168,76,0.2);color:var(--gold);border:1px solid var(--gold-border)}
 .pill-sergi{background:rgba(100,180,80,0.2);color:#8d8;border:1px solid rgba(100,180,80,0.4)}
+
+/* MONTH SELECTOR */
+.month-bar{display:flex;align-items:center;gap:12px;margin-bottom:.8rem;padding:10px 16px;background:var(--panel);border:1px solid var(--border);border-radius:4px;flex-shrink:0}
+.month-bar-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);font-weight:700;white-space:nowrap}
+.month-select{padding:6px 14px;background:var(--gold-dim);border:1px solid var(--gold-border);border-radius:3px;color:var(--gold);font-family:'Domine',serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;outline:none;appearance:none;-webkit-appearance:none}
+.month-select option{background:#1a1a1a;color:#fff}
+.month-total-pill{margin-left:auto;padding:5px 14px;background:rgba(201,168,76,0.12);border:1px solid var(--gold-border);border-radius:3px;font-size:11px;font-weight:900;color:var(--gold)}
+
+/* AGENT SUMMARY BAR */
+.agent-summary{display:flex;gap:8px;padding:8px 10px;background:rgba(0,0,0,0.25);border-bottom:1px solid var(--border);flex-wrap:wrap}
+.agent-sum-item{display:flex;flex-direction:column;align-items:center;flex:1;min-width:0}
+.agent-sum-lbl{font-size:7px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.agent-sum-val{font-size:13px;font-weight:900;color:#fff;line-height:1.2}
+.agent-sum-val.gold{color:var(--gold)}
 @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 .sale-card{animation:fadeIn .2s ease}
 .toast{position:fixed;bottom:24px;right:24px;z-index:9999;padding:10px 18px;background:#222;border:1px solid var(--gold-border);border-radius:4px;color:var(--gold);font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;animation:fadeIn .2s ease;transition:opacity .3s;pointer-events:none}
@@ -233,6 +247,42 @@ table.mgr-table tr:hover td{background:rgba(255,255,255,0.02)}
   <div class="view-tabs" id="view-tabs">
     <button class="vtab active" data-view="sales" onclick="switchView('sales',this)">📋 Ventas</button>
     <button class="vtab manager-only" data-view="manager" onclick="switchView('manager',this)">⚙️ Gestión Manager</button>
+  </div>
+
+  <div class="month-bar" id="month-bar">
+    <span class="month-bar-label">📅 Mes:</span>
+    <select class="month-select" id="month-select" onchange="onMonthChange()">
+      <option value="all">Todos los meses</option>
+      <option value="2026-09">Septiembre 2026</option>
+      <option value="2026-10">Octubre 2026</option>
+      <option value="2026-11">Noviembre 2026</option>
+      <option value="2026-12">Diciembre 2026</option>
+      <option value="2027-01">Enero 2027</option>
+      <option value="2027-02">Febrero 2027</option>
+      <option value="2027-03">Marzo 2027</option>
+      <option value="2027-04">Abril 2027</option>
+      <option value="2027-05">Mayo 2027</option>
+      <option value="2027-06">Junio 2027</option>
+      <option value="2027-07">Julio 2027</option>
+      <option value="2027-08">Agosto 2027</option>
+      <option value="2027-09">Septiembre 2027</option>
+      <option value="2027-10">Octubre 2027</option>
+      <option value="2027-11">Noviembre 2027</option>
+      <option value="2027-12">Diciembre 2027</option>
+      <option value="2028-01">Enero 2028</option>
+      <option value="2028-02">Febrero 2028</option>
+      <option value="2028-03">Marzo 2028</option>
+      <option value="2028-04">Abril 2028</option>
+      <option value="2028-05">Mayo 2028</option>
+      <option value="2028-06">Junio 2028</option>
+      <option value="2028-07">Julio 2028</option>
+      <option value="2028-08">Agosto 2028</option>
+      <option value="2028-09">Septiembre 2028</option>
+      <option value="2028-10">Octubre 2028</option>
+      <option value="2028-11">Noviembre 2028</option>
+      <option value="2028-12">Diciembre 2028</option>
+    </select>
+    <span class="month-total-pill" id="month-total-pill">—</span>
   </div>
 
   <div id="sales-view" style="flex:1;display:flex;flex-direction:column">
@@ -325,6 +375,40 @@ table.mgr-table tr:hover td{background:rgba(255,255,255,0.02)}
           </select>
         </div>
       </div>
+      <div class="form-group">
+        <label class="form-label">Mes de la venta</label>
+        <select class="form-control" id="f-month">
+          <option value="">— Seleccionar —</option>
+          <option value="2026-09">Septiembre 2026</option>
+          <option value="2026-10">Octubre 2026</option>
+          <option value="2026-11">Noviembre 2026</option>
+          <option value="2026-12">Diciembre 2026</option>
+          <option value="2027-01">Enero 2027</option>
+          <option value="2027-02">Febrero 2027</option>
+          <option value="2027-03">Marzo 2027</option>
+          <option value="2027-04">Abril 2027</option>
+          <option value="2027-05">Mayo 2027</option>
+          <option value="2027-06">Junio 2027</option>
+          <option value="2027-07">Julio 2027</option>
+          <option value="2027-08">Agosto 2027</option>
+          <option value="2027-09">Septiembre 2027</option>
+          <option value="2027-10">Octubre 2027</option>
+          <option value="2027-11">Noviembre 2027</option>
+          <option value="2027-12">Diciembre 2027</option>
+          <option value="2028-01">Enero 2028</option>
+          <option value="2028-02">Febrero 2028</option>
+          <option value="2028-03">Marzo 2028</option>
+          <option value="2028-04">Abril 2028</option>
+          <option value="2028-05">Mayo 2028</option>
+          <option value="2028-06">Junio 2028</option>
+          <option value="2028-07">Julio 2028</option>
+          <option value="2028-08">Agosto 2028</option>
+          <option value="2028-09">Septiembre 2028</option>
+          <option value="2028-10">Octubre 2028</option>
+          <option value="2028-11">Noviembre 2028</option>
+          <option value="2028-12">Diciembre 2028</option>
+        </select>
+      </div>
       <div class="commission-preview">
         <div class="comm-prev-lbl">Comisión estimada</div>
         <div class="comm-prev-val" id="comm-preview">—</div>
@@ -377,6 +461,14 @@ const TYPE_CLASS = {
 const AGENT_CLASS = {
   'Pol':'agent-pol','Aina':'agent-aina','Marta':'agent-marta','Sergi':'agent-sergi'
 };
+const MONTH_NAMES = ['','Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+// period key = "YYYY-MM", returns "Mes Año"
+function periodLabel(key) {
+  if(!key) return '—';
+  const [y,m] = String(key).split('-');
+  return (MONTH_NAMES[parseInt(m)] || '?') + ' ' + y;
+}
+
 const COMMISSION_RATES = {
   'Balcony':    {'15':{'1':800,'4':900,'6':950},  '30':{'1':1500,'4':1700,'6':1800}},
   'Pitch Row':  {'15':{'1':1200,'4':1350,'6':1450},'30':{'1':2200,'4':2500,'6':2700}},
@@ -400,6 +492,15 @@ function formatEur(n){
 let currentUser = null;
 let sales = [];
 let modalAgent = null;
+function defaultPeriod() {
+  const now = new Date();
+  const y = now.getFullYear(), m = now.getMonth()+1;
+  const key = y+'-'+String(m).padStart(2,'0');
+  // if within project range return it, else return first period
+  if(y > 2026 || (y===2026 && m>=9)) return key;
+  return '2026-09';
+}
+let selectedMonth = defaultPeriod();
 let mgrFilter = 'all';
 
 function showLoading(msg='Conectando...') {
@@ -464,6 +565,8 @@ async function doLogin() {
     if(user==='Manager') {
       document.querySelectorAll('.manager-only').forEach(el=>el.style.display='block');
     }
+    selectedMonth = defaultPeriod();
+    document.getElementById('month-select').value = selectedMonth;
     renderAll();
   } catch(e) {
     err.textContent = 'Error conectando a la base de datos. Intenta de nuevo.';
@@ -494,24 +597,68 @@ function switchView(view, btn) {
   if(view==='manager') renderManager();
 }
 
+function onMonthChange() {
+  selectedMonth = document.getElementById('month-select').value;
+  renderAll();
+  if(document.getElementById('manager-view').style.display !== 'none') renderManager();
+}
+
+function filterByMonth(arr) {
+  if(selectedMonth === 'all') return arr;
+  return arr.filter(s => String(s.sale_month) === String(selectedMonth));
+}
+
 function renderAll() {
+  // sync month selector
+  document.getElementById('month-select').value = selectedMonth;
+
   const grid = document.getElementById('agents-grid');
   grid.innerHTML='';
+
+  const visibleSales = filterByMonth(sales);
+  const grandTotal = visibleSales.reduce((a,s)=>a+(s.commission||0),0);
+  const pill = document.getElementById('month-total-pill');
+  const mLabel = selectedMonth === 'all' ? 'Total global' : periodLabel(selectedMonth);
+  pill.textContent = mLabel + ': ' + formatEur(grandTotal);
+
   AGENTS.forEach(agent=>{
     const isMe = currentUser===agent || currentUser==='Manager';
-    const agentSales = sales.filter(s=>s.agent===agent);
+    const agentSalesAll = sales.filter(s=>s.agent===agent);
+    const agentSales = filterByMonth(agentSalesAll);
     const total = agentSales.reduce((a,s)=>a+(s.commission||0),0);
+    const approved = agentSales.filter(s=>s.status==='approved').reduce((a,s)=>a+(s.commission||0),0);
+    const pending = agentSales.filter(s=>s.status==='pending').length;
+    const numSales = agentSales.length;
+    const totalSeats = agentSales.reduce((a,s)=>a+(parseInt(s.seats)||0),0);
     const locked = !isMe;
     const col = document.createElement('div');
     col.className=`agent-col ${AGENT_CLASS[agent]} ${locked?'locked':''}`;
     const salesHtml = agentSales.length===0
-      ? `<div class="empty-state"><div class="empty-state-icon">📭</div><div class="empty-state-txt">Sin ventas</div></div>`
+      ? `<div class="empty-state"><div class="empty-state-icon">📭</div><div class="empty-state-txt">Sin ventas${selectedMonth!=='all'?' este mes':''}</div></div>`
       : agentSales.map(s=>saleCardHtml(s, isMe && currentUser!=='Manager')).join('');
     col.innerHTML=`
       <div class="agent-col-hdr">
         <span class="chi">👤</span>
         <div class="agent-col-title">${agent}</div>
         <div class="agent-col-total">${formatEur(total)}</div>
+      </div>
+      <div class="agent-summary">
+        <div class="agent-sum-item">
+          <span class="agent-sum-lbl">Ventas</span>
+          <span class="agent-sum-val">${numSales}</span>
+        </div>
+        <div class="agent-sum-item">
+          <span class="agent-sum-lbl">Asientos</span>
+          <span class="agent-sum-val">${totalSeats}</span>
+        </div>
+        <div class="agent-sum-item">
+          <span class="agent-sum-lbl">Pendientes</span>
+          <span class="agent-sum-val">${pending}</span>
+        </div>
+        <div class="agent-sum-item">
+          <span class="agent-sum-lbl">Comisión</span>
+          <span class="agent-sum-val gold">${formatEur(total)}</span>
+        </div>
       </div>
       <div class="agent-col-body">${salesHtml}</div>
       ${!locked && currentUser!=='Manager' ? `<button class="add-sale-btn" onclick="openModal('${agent}')">＋ Nueva venta</button>` : ''}
@@ -532,6 +679,7 @@ function saleCardHtml(s, canDelete) {
     <div class="sale-card-field"><span class="sale-card-key">Sección</span><span class="sale-card-val">${s.section}</span></div>
     <div class="sale-card-field"><span class="sale-card-key">Fila / Asientos</span><span class="sale-card-val">${s.row} · ${s.seats} asiento${s.seats>1?'s':''}</span></div>
     <div class="sale-card-field"><span class="sale-card-key">Cliente</span><span class="sale-card-val">${s.client}</span></div>
+    <div class="sale-card-field"><span class="sale-card-key">Mes</span><span class="sale-card-val">${periodLabel(s.sale_month)}</span></div>
     <div class="sale-card-field"><span class="sale-card-key">Access Fee</span><span class="sale-card-val">${s.access} años · ${s.payments} pago${s.payments>1?'s':''}</span></div>
     <div class="sale-card-commission">
       <span class="sale-commission-lbl">Comisión</span>
@@ -562,6 +710,7 @@ async function deleteSale(id) {
 function openModal(agent) {
   modalAgent=agent;
   ['f-type','f-section','f-row','f-client','f-access','f-payments'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('f-month').value = selectedMonth !== 'all' ? selectedMonth : defaultPeriod();
   document.getElementById('f-seats').value=1;
   document.getElementById('comm-preview').textContent='—';
   document.getElementById('comm-preview-sub').textContent='Completa los campos';
@@ -593,12 +742,14 @@ async function saveSale() {
   const client=document.getElementById('f-client').value.trim();
   const access=document.getElementById('f-access').value;
   const payments=document.getElementById('f-payments').value;
-  if(!type||!section||!row||!seats||!client||!access||!payments){showToast('Completa todos los campos');return}
+  const saleMonth=document.getElementById('f-month').value;
+  if(!type||!section||!row||!seats||!client||!access||!payments||!saleMonth){showToast('Completa todos los campos');return}
   const comm = calcCommission(type,access,payments,seats);
   const newSale = {
     agent:modalAgent, type, section, row,
     seats, client, access, payments,
     commission:comm, status:'pending',
+    sale_month: saleMonth,
     sale_date: new Date().toLocaleDateString('es-ES')
   };
   showLoading('Guardando...');
@@ -626,17 +777,19 @@ function setFilter(f,btn) {
 }
 
 function renderManager() {
-  const total=sales.length;
-  const pending=sales.filter(s=>s.status==='pending').length;
-  const approved=sales.filter(s=>s.status==='approved').length;
-  const totalComm=sales.filter(s=>s.status==='approved').reduce((a,s)=>a+(s.commission||0),0);
+  const mSales=filterByMonth(sales);
+  const total=mSales.length;
+  const pending=mSales.filter(s=>s.status==='pending').length;
+  const approved=mSales.filter(s=>s.status==='approved').length;
+  const totalComm=mSales.filter(s=>s.status==='approved').reduce((a,s)=>a+(s.commission||0),0);
   document.getElementById('mgr-summary').innerHTML=`
     <div class="msc"><div class="msc-lbl">Total Ventas</div><div class="msc-val">${total}</div><div class="msc-sub">registradas</div></div>
     <div class="msc"><div class="msc-lbl">Pendientes</div><div class="msc-val">${pending}</div><div class="msc-sub">por verificar</div></div>
     <div class="msc"><div class="msc-lbl">Aprobadas</div><div class="msc-val">${approved}</div><div class="msc-sub">confirmadas</div></div>
     <div class="msc"><div class="msc-lbl">Comisiones Aprobadas</div><div class="msc-val">${formatEur(totalComm)}</div><div class="msc-sub">total</div></div>
   `;
-  let filtered = mgrFilter==='all'?sales:sales.filter(s=>s.status===mgrFilter);
+  const monthSales = filterByMonth(sales);
+  let filtered = mgrFilter==='all'?monthSales:monthSales.filter(s=>s.status===mgrFilter);
   const tbody = document.getElementById('mgr-tbody');
   if(filtered.length===0) {
     tbody.innerHTML=`<tr><td colspan="11" style="text-align:center;padding:2rem;color:var(--muted);font-size:10px;letter-spacing:2px;text-transform:uppercase">Sin ventas</td></tr>`;
@@ -650,10 +803,15 @@ function renderManager() {
       ? `<div class="mgr-action-btns">
            <button class="btn-approve" onclick="approveReject(${s.id},'approved')">✓ Aprobar</button>
            <button class="btn-reject" onclick="approveReject(${s.id},'rejected')">✕ Rechazar</button>
+           <button class="btn-delete" onclick="mgrDeleteSale(${s.id})" title="Eliminar">🗑</button>
          </div>`
-      : `<span style="font-size:9px;color:var(--muted)">${s.sale_date||'—'}</span>`;
+      : `<div class="mgr-action-btns">
+           <span style="font-size:9px;color:var(--muted);margin-right:4px">${s.sale_date||'—'}</span>
+           <button class="btn-delete" onclick="mgrDeleteSale(${s.id})" title="Eliminar">🗑</button>
+         </div>`;
     return `<tr>
       <td><span class="mgr-agent-pill ${pc}">${s.agent}</span></td>
+      <td>${periodLabel(s.sale_month)}</td>
       <td>${s.type}</td><td>${s.section}</td><td>${s.row}</td>
       <td>${s.seats}</td><td>${s.client}</td>
       <td>${s.access} años</td><td>${s.payments}</td>
@@ -664,6 +822,22 @@ function renderManager() {
   }).join('');
 }
 
+
+async function mgrDeleteSale(id) {
+  if(!confirm('¿Eliminar esta venta? Esta acción no se puede deshacer.')) return;
+  showLoading('Eliminando...');
+  try {
+    await deleteSaleDB(id);
+    await loadSales();
+    renderManager();
+    renderAll();
+    showToast('Venta eliminada');
+  } catch(e) {
+    showToast('Error al eliminar'); console.error(e);
+  } finally {
+    hideLoading();
+  }
+}
 async function approveReject(id, status) {
   showLoading(status==='approved'?'Aprobando...':'Rechazando...');
   try {
@@ -683,8 +857,9 @@ async function approveReject(id, status) {
 // EXPORT
 // ═══════════════════════════════════════════════════
 function exportCSV() {
-  const headers=['Comercial','Tipo','Sección','Fila','Asientos','Cliente','Access Fee','Pagos','Comisión','Estado','Fecha'];
-  const rows=sales.map(s=>[s.agent,s.type,s.section,s.row,s.seats,s.client,s.access+' años',s.payments,s.commission||0,s.status,s.sale_date||''].join(';'));
+  const headers=['Comercial','Mes','Tipo','Sección','Fila','Asientos','Cliente','Access Fee','Pagos','Comisión','Estado','Fecha'];
+  const expSales = filterByMonth(sales);
+  const rows=expSales.map(s=>[s.agent,periodLabel(s.sale_month),s.type,s.section,s.row,s.seats,s.client,s.access+' años',s.payments,s.commission||0,s.status,s.sale_date||''].join(';'));
   const csv=headers.join(';')+'\n'+rows.join('\n');
   const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'});
   const a=document.createElement('a');a.href=URL.createObjectURL(blob);
